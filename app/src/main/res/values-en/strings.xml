@@ -4,4 +4,6 @@
     <string name="messages_title">Messages</string>
     <string name="categories_title">Categories</string>
     <string name="settings_title">Settings</string>
+
+    <string name="sms_mandatory_permission_message">SMS permissions are required to use the app</string>
 </resources>
