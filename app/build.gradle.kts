@@ -93,6 +93,8 @@ dependencies {
 
     // Material Icons
     implementation(libs.androidx.material.icons.extended)
+
+    implementation(libs.accompanist.permissions)
 }
 
 kapt {

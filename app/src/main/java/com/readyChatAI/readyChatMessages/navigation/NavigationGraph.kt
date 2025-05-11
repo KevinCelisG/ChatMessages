@@ -2,10 +2,12 @@ package com.readyChatAI.readyChatMessages.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.readyChatAI.readyChatMessages.presentation.screens.categories.CategoriesScreen
+import com.readyChatAI.readyChatMessages.presentation.screens.messages.MessageViewModel
 import com.readyChatAI.readyChatMessages.presentation.screens.messages.MessagesScreen
 import com.readyChatAI.readyChatMessages.presentation.screens.settings.SettingsScreen
 import com.readyChatAI.readyChatMessages.presentation.screens.splash.SplashScreen
@@ -15,6 +17,8 @@ fun NavigationGraph(
     navHostController: NavHostController,
     modifier: Modifier = Modifier
 ) {
+    val messageViewModel: MessageViewModel = hiltViewModel()
+
     NavHost(
         navController = navHostController,
         startDestination = Screen.SplashScreen,
@@ -25,7 +29,7 @@ fun NavigationGraph(
         }
 
         composable<Screen.MessagesScreen> {
-            MessagesScreen(navHostController)
+            MessagesScreen(navHostController, messageViewModel)
         }
 
         composable<Screen.CategoriesScreen> {

@@ -3,4 +3,6 @@
     <string name="messages_title">Mensajes</string>
     <string name="categories_title">Categorías</string>
     <string name="settings_title">Configuración</string>
+
+    <string name="sms_mandatory_permission_message">Se necesitan permisos de SMS para usar la app</string>
 </resources>
