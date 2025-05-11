@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ReadyChatMessages</string>
+    <string name="messages_title">Messages</string>
+    <string name="categories_title">Categories</string>
+    <string name="settings_title">Settings</string>
+</resources>
