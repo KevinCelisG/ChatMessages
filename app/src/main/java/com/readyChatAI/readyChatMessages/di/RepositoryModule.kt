@@ -1,7 +1,9 @@
 package com.readyChatAI.readyChatMessages.di
 
-import com.readyChatAI.readyChatMessages.data.repository.SmsRepositoryImpl
-import com.readyChatAI.readyChatMessages.domain.repository.SmsRepository
+import com.readyChatAI.readyChatMessages.data.repository.ChatRepositoryImpl
+import com.readyChatAI.readyChatMessages.data.repository.PreferencesRepositoryImpl
+import com.readyChatAI.readyChatMessages.domain.repository.ChatRepository
+import com.readyChatAI.readyChatMessages.domain.repository.PreferencesRepository
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -15,6 +17,12 @@ abstract class RepositoryModule {
     @Binds
     @Singleton
     abstract fun bindSmsRepository(
-        smsRepository: SmsRepositoryImpl
-    ): SmsRepository
+        smsRepository: ChatRepositoryImpl
+    ): ChatRepository
+
+    @Binds
+    @Singleton
+    abstract fun bindPreferenceRepository(
+        preferencesRepository: PreferencesRepositoryImpl
+    ): PreferencesRepository
 }

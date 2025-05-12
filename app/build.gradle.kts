@@ -79,7 +79,7 @@ dependencies {
     // Hilt
     implementation(libs.hilt.android)
     kapt(libs.hilt.android.compiler)
-    implementation (libs.androidx.hilt.navigation.compose)
+    implementation(libs.androidx.hilt.navigation.compose)
 
     // Room
     implementation(libs.androidx.room.runtime)
@@ -95,6 +95,9 @@ dependencies {
     implementation(libs.androidx.material.icons.extended)
 
     implementation(libs.accompanist.permissions)
+
+    // JSON
+    implementation(libs.gson)
 }
 
 kapt {

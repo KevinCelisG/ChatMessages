@@ -9,11 +9,14 @@ sealed class Screen(val name: String) {
     data object SplashScreen : Screen("SplashScreen")
 
     @Serializable
-    data object MessagesScreen : Screen("MessagesScreen")
+    data object ChatsScreen : Screen("ChatsScreen")
 
     @Serializable
     data object CategoriesScreen : Screen("CategoriesScreen")
 
     @Serializable
     data object SettingsScreen : Screen("SettingsScreen")
+
+    @Serializable
+    data object ChatScreen : Screen("ChatScreen")
 }

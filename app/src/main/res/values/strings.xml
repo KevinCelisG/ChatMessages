@@ -1,8 +1,29 @@
 <resources>
-    <string name="app_name">ReadyChatMessages</string>
-    <string name="messages_title">Mensajes</string>
+    <string name="app_name">Messages</string>
+    <string name="chats_title">Chats</string>
     <string name="categories_title">Categorías</string>
     <string name="settings_title">Configuración</string>
 
     <string name="sms_mandatory_permission_message">Se necesitan permisos de SMS para usar la app</string>
+    <string name="back">Volver</string>
+
+    <string name="delete_item">Eliminar %1$s</string>
+    <string name="delete">Eliminar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="sure_delete_item">¿Estas seguro de eliminar %1$s?</string>
+
+    <string name="set_to_english">Inglés</string>
+    <string name="set_to_spanish">Spanish</string>
+    <string name="set_dark">Tema oscuro</string>
+    <string name="set_light">Tema claro</string>
+
+    <string name="add_new_category">+ Agregar una nueva categoría</string>
+    <string name="create_category">Crear categoría</string>
+    <string name="edit_category">Editar categoría</string>
+    <string name="name">Nombre</string>
+    <string name="add">Agregar</string>
+    <string name="new_keyword">Nueva palabra clave</string>
+    <string name="fill_all_fields">Tienes que llenar todos los campos</string>
+    <string name="write_message">Escribe un mensaje</string>
+    <string name="accept">Aceptar</string>
 </resources>
