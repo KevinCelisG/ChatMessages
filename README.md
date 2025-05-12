@@ -1,4 +1,4 @@
-# SimpleText
+# ChatMessage
 
 A lightweight messaging app that lets you load, send, and receive messages with ease.
 
