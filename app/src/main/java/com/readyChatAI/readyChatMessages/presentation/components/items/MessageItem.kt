@@ -48,11 +48,6 @@ fun MessageItem(
             modifier = Modifier.fillMaxWidth()
         ) {
             Text(
-                text = "De: ${message.sender}",
-                style = MaterialTheme.typography.bodyMedium,
-                color = Color.DarkGray
-            )
-            Text(
                 text = Util.formattedDateText(message.date),
                 style = MaterialTheme.typography.bodySmall,
                 color = Color.Gray

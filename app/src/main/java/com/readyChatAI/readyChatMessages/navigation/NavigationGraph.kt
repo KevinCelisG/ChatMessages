@@ -7,17 +7,22 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.readyChatAI.readyChatMessages.presentation.screens.categories.CategoriesScreen
-import com.readyChatAI.readyChatMessages.presentation.screens.messages.MessageViewModel
-import com.readyChatAI.readyChatMessages.presentation.screens.messages.MessagesScreen
+import com.readyChatAI.readyChatMessages.presentation.screens.categories.CategoryViewModel
+import com.readyChatAI.readyChatMessages.presentation.screens.chats.ChatViewModel
+import com.readyChatAI.readyChatMessages.presentation.screens.chats.chat.ChatScreen
+import com.readyChatAI.readyChatMessages.presentation.screens.chats.load_chats.ChatsScreen
 import com.readyChatAI.readyChatMessages.presentation.screens.settings.SettingsScreen
+import com.readyChatAI.readyChatMessages.presentation.screens.settings.SettingsViewModel
 import com.readyChatAI.readyChatMessages.presentation.screens.splash.SplashScreen
 
 @Composable
 fun NavigationGraph(
     navHostController: NavHostController,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    settingsViewModel: SettingsViewModel
 ) {
-    val messageViewModel: MessageViewModel = hiltViewModel()
+    val chatViewModel: ChatViewModel = hiltViewModel()
+    val categoryViewModel: CategoryViewModel = hiltViewModel()
 
     NavHost(
         navController = navHostController,
@@ -25,19 +30,23 @@ fun NavigationGraph(
         modifier = modifier
     ) {
         composable<Screen.SplashScreen> {
-            SplashScreen(navHostController)
+            SplashScreen(navHostController, chatViewModel, categoryViewModel)
         }
 
-        composable<Screen.MessagesScreen> {
-            MessagesScreen(navHostController, messageViewModel)
+        composable<Screen.ChatsScreen> {
+            ChatsScreen(navHostController, chatViewModel, categoryViewModel)
         }
 
         composable<Screen.CategoriesScreen> {
-            CategoriesScreen(navHostController)
+            CategoriesScreen(categoryViewModel)
         }
 
         composable<Screen.SettingsScreen> {
-            SettingsScreen(navHostController)
+            SettingsScreen(settingsViewModel)
+        }
+
+        composable<Screen.ChatScreen> {
+            ChatScreen(navHostController, chatViewModel)
         }
     }
 }

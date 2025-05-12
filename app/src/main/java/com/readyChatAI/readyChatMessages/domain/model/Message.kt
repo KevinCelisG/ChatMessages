@@ -5,6 +5,5 @@ import java.time.Instant
 data class Message(
     val text: String,
     val isSent: Boolean,
-    val sender: String,
     val date: Instant
 )

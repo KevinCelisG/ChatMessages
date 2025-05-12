@@ -1,11 +1,7 @@
 package com.readyChatAI.readyChatMessages.presentation.components.menu
 
-import androidx.compose.foundation.layout.WindowInsets
-import androidx.compose.foundation.layout.asPaddingValues
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.navigationBars
-import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.Label
 import androidx.compose.material.icons.automirrored.filled.Message
@@ -36,20 +32,20 @@ fun BottomMenu(
             .height(Util.heightPercent(percent = Dimens.BOTTOM_MENU_HEIGHT))
     ) {
         NavigationBarItem(
-            selected = currentScreen == Screen.MessagesScreen.name,
+            selected = currentScreen == Screen.ChatsScreen.name,
             onClick = {
-                navHostController.navigate(Screen.MessagesScreen)
+                navHostController.navigate(Screen.ChatsScreen)
             },
             icon = {
                 Icon(
                     imageVector = Icons.AutoMirrored.Filled.Message,
-                    contentDescription = stringResource(id = R.string.messages_title),
+                    contentDescription = stringResource(id = R.string.chats_title),
                     tint = MaterialTheme.colorScheme.onBackground
                 )
             },
             label = {
                 Text(
-                    text = stringResource(id = R.string.messages_title),
+                    text = stringResource(id = R.string.chats_title),
                     fontSize = 12.sp,
                     color = MaterialTheme.colorScheme.onBackground
                 )

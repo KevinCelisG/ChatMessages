@@ -1,9 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">ReadyChatMessages</string>
-    <string name="messages_title">Messages</string>
+    <string name="app_name">Messages</string>
+    <string name="chats_title">Chats</string>
     <string name="categories_title">Categories</string>
     <string name="settings_title">Settings</string>
 
     <string name="sms_mandatory_permission_message">SMS permissions are required to use the app</string>
+    <string name="back">Back</string>
+
+    <string name="delete_item">Delete %1$s</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+    <string name="sure_delete_item">Are you sure to delete %1$s?</string>
+
+    <string name="set_to_english">Inglés</string>
+    <string name="set_to_spanish">Spanish</string>
+    <string name="set_dark">Dark theme</string>
+    <string name="set_light">Light theme</string>
+
+    <string name="add_new_category">+ Add new category</string>
+    <string name="create_category">Create category</string>
+    <string name="edit_category">Edit category</string>
+    <string name="name">Name</string>
+    <string name="add">Add</string>
+    <string name="new_keyword">New keyword</string>
+    <string name="fill_all_fields">You have to fill all the fields</string>
+    <string name="write_message">Write a message</string>
+    <string name="accept">Accept</string>
 </resources>
