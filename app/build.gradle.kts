@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.kotlin.serialization)
 
     // Hilt
     kotlin("kapt")
@@ -9,12 +10,12 @@ plugins {
 
 android {
     namespace = "com.readyChatAI.readyChatMessages"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.readyChatAI.readyChatMessages"
         minSdk = 26
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -78,7 +79,7 @@ dependencies {
     // Hilt
     implementation(libs.hilt.android)
     kapt(libs.hilt.android.compiler)
-    implementation (libs.androidx.hilt.navigation.compose)
+    implementation(libs.androidx.hilt.navigation.compose)
 
     // Room
     implementation(libs.androidx.room.runtime)
@@ -92,6 +93,11 @@ dependencies {
 
     // Material Icons
     implementation(libs.androidx.material.icons.extended)
+
+    implementation(libs.accompanist.permissions)
+
+    // JSON
+    implementation(libs.gson)
 }
 
 kapt {
